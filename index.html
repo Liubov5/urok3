@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		.col-8{
+			width:60%;
+		}
+		.bg-gray{
+			background-color: gray;
+		}
+		.mx-auto{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.mt-1{
+			margin-top: 10px;
+		}
+		.col-10{
+			width: 80%;
+		}
+		.col-2{
+			width: 20%;
+		}
+		.bg-green{
+			background-color: gray
+		}
+		.d-flex{
+			display: flex;
+		}
+		.col-4{
+			width: 40%;
+		}
+		.w-25{
+			width: 25%
+		}
+		.text-center{
+			text-align: center;
+		}
+		.btn{
+			height: 40px;
+			width: 150px;
+		}
+	</style>
+</head>
+<body style="background-color: black">
+	<div class="col-8 bg-gray mx-auto d-flex" style="height: 100px;">
+		<div class="col-10 bg-green" style="height: 100px;">
+			<h1>Мулан</h1>
+			<p>Разочарование года</p>
+		</div>
+		<div class="col-2 bg-green text-center" style="height: 100px;">
+			<img src="star.png" class="w-25 star">
+			<h1 class="count1">-1000</h1>
+		</div>
+	</div>
+	<div class="col-8 bg-gray mx-auto d-flex mt-1" style="height: 800px;">
+		<div class="col-4 bg-green" style="height: 800px;">	
+			<img src="mulan.jpg" class="col-10 star1">	
+			<button class="btn">Добавить в список</button>
+		</div>
+		<div class="col-8 bg-green" style="height: 800px;">	
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/rVn2NCgCVLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<p>Очень наивное кино. Слишком много нереальных сцен, которые утратили свою актуальность. Возможно, пару лет назад мне бы это понравилось, но сейчас это избитая тема. Плюс главная героиня явно переигрывает, совсем не чувствуется в ней энергетики бойца.</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let b = document.querySelector(".btn");
+		let s = document.querySelector(".star");
+		let h1_count = document.querySelector(".count1")
+		let n = -1000;
+		
+		b.onclick = function(){
+			alert("Добавлено в список");
+		}
+
+		s.onclick = function(){
+			n = n - 1;
+			h1_count.innerHTML = n;		
+		}
+	</script>
+</body>
+</html>
